@@ -23,7 +23,6 @@ nav {
 
 main{
     background-color: #ff8f87;
-    height: 700px;
     padding: 5%;
     
 }
@@ -39,7 +38,6 @@ aside{
 article{
     float: right;
     width: 65%;
-    text-align: left;
     background-color: #974975;
     padding: 1%;
     border-radius: 2px;
@@ -50,7 +48,7 @@ footer{
 }
 
 .socicon{
-    height: 16px;
+    height: 64px;
     padding: 0%;
 }
 
@@ -58,12 +56,26 @@ footer{
     height: 64px;
 }
 
-@media only screen and (max-width: 575.5px){
+.foot-link{
+    color: black;
+    font-size: large; 
+    padding: 2%;
+}
 
+@media only screen and (max-width: 575.5px){
+    
     .navbar-nav {
         width: 100%;
     }
 
-    
+    aside{
+        float: none;
+        width: 100%;
+    }
+
+    article{
+        width: 100%;
+        float: none;
+    }
 }
 
