@@ -38,28 +38,41 @@
 
     </nav>
 
-    <main>
-        <article>
-            game1
-            <br>
-            br
-            <br>
-            game2
-            <br>
-            game3
-            <br>
-            gallery
-            <br>
-            about us
-            <br>
-            service
-            <br>
-            contact us
-        </article>
-
-        
+    <div id="pageContent">
+        <main>
+            <div class="container-fluid float-start">
+                <div class="row">
+                    <div class="col p-2">
+                        <!-- toggler -->
+                        <button id="sidebarBtn" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                            <i class="bi bi-arrow-right-square-fill" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                                Lo último sobre T3AMPO
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <article>
+                game1
+                <br>
+                br
+                <br>
+                game2
+                <br>
+                game3
+                <br>
+                gallery
+                <br>
+                about us
+                <br>
+                service
+                <br>
+                contact us
+            </article>
+        </main>
+    
         <aside>
-            <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
                 <div class="offcanvas-header">
                     <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -104,20 +117,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col min-vh-100 p-4">
-                        <!-- toggler -->
-                        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
-                            <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+            
         </aside>
-    </main>
-
-    
+    </div>
 
     <footer class="text-center text-black">
         <div class="container p-4">
