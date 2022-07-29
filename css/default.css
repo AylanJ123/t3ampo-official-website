@@ -109,8 +109,9 @@ main>div {
     width: 98%;
 }
 
-.mediumImage{
-    height: 360px;
+.leftImage{
+    width: 40%;
+    float: left;
     border-radius: 5%;
 }
 
@@ -136,15 +137,12 @@ p{
     color: black;
 }
 
-.gametitle:hover {
+a:hover {
     color: #fcba03;
 }
 
-@media only screen and (max-width: 670px){
-    .mediumImage{
-        height: 300px;
-        border-radius: 5%;
-    }
+footer a:hover{
+    color: white;
 }
 
 @media only screen and (max-width: 575.5px) {
@@ -175,8 +173,8 @@ p{
         float: none;
     }
 
-    .mediumImage{
-        height: 200px;
+    .leftImage{
         border-radius: 5%;
+        width: 100%;
     }
 }
