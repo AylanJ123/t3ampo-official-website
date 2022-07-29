@@ -63,6 +63,10 @@ h1 {
     font-weight: bold;
 }
 
+h2{
+    color: #0a0b0f;
+}
+
 .socicon {
     height: 64px;
     padding: 0%;
@@ -102,6 +106,12 @@ main>div {
     padding: 1%;
     border-radius: 5px;
     height: 100%;
+    width: 98%;
+}
+
+.mediumImage{
+    height: 360px;
+    border-radius: 5%;
 }
 
 .gameblock {
@@ -109,11 +119,11 @@ main>div {
 }
 
 .gameimg {
-    height: 240px;
     border-radius: 5px;
+    width: 420px;
 }
 
-.gametitle {
+a {
     text-align: center;
     display: block;
     color: white;
@@ -121,8 +131,20 @@ main>div {
     font-size: larger;
 }
 
+p{
+    text-align: justify;
+    color: black;
+}
+
 .gametitle:hover {
     color: #fcba03;
+}
+
+@media only screen and (max-width: 670px){
+    .mediumImage{
+        height: 300px;
+        border-radius: 5%;
+    }
 }
 
 @media only screen and (max-width: 575.5px) {
@@ -130,6 +152,7 @@ main>div {
     .navbar-nav {
         width: 100%;
     }
+
 
     aside {
         border-radius: 0;
@@ -143,5 +166,17 @@ main>div {
         margin: 0;
         width: 100%;
         float: none;
+    }
+    
+    #mainContent{
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        float: none;
+    }
+
+    .mediumImage{
+        height: 200px;
+        border-radius: 5%;
     }
 }
