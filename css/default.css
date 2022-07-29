@@ -141,6 +141,10 @@ a:hover {
     color: #fcba03;
 }
 
+footer a{
+    display: inline;
+}
+
 footer a:hover{
     color: white;
 }
