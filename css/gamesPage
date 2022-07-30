@@ -1,0 +1,8 @@
+.gameblock {
+    margin: 5px;
+}
+
+.gameimg {
+    border-radius: 5px;
+    width: 420px;
+}
