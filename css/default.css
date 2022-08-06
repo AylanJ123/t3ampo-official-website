@@ -6,16 +6,16 @@ body {
 }
 
 header {
-    height: 125px;
+    height: 75px;
     width: 100%;
     background-color: #971760;
     background-image: url(../images/UI/banner.jpg);
     background-position-x: center;
-    background-size: auto 125px;
+    background-size: auto 75px;
 }
 
 nav {
-    background-color: #fb8b24;
+    background-color: #ffe1a8;
 }
 
 .nav-link {
@@ -29,32 +29,32 @@ nav {
 main {
     width: 100%;
     height: 100%;
-    background-color: #001524;
+    background-color: #723d46;
 }
 
 aside {
     float: left;
     width: 25%;
     padding: 1%;
-    background-color: #e36414;
+    background-color: #c9cba3;
     border-radius: 2px;
     margin: 1%;
     height: 100%;
-    color: white;
+    color: black;
 }
 
 article {
     width: 70%;
     margin: 1%;
     float: right;
-    background-color: #f35b04;
+    background-color: #e26d5c;
     padding: 1%;
     border-radius: 2px;
     height: 100%;
 }
 
 footer {
-    background-color: #fb8b24;
+    background-color: #472d30;
 }
 
 h1 {
@@ -90,7 +90,7 @@ main>div {
 #mainContent {
     align-content: center;
     margin: 1%;
-    background-color: #f35b04;
+    background-color: #e26d5c;
     padding: 1%;
     border-radius: 5px;
     height: 100%;
