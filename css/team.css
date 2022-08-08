@@ -20,14 +20,14 @@
     width: min-content;
     height: 100%;
     box-shadow: none;
-    background-color: #c9cba3;
+    background-color: #e26d5c;
     transition: all .3s ease-in-out;
     border-radius: 10px;
 }
 
 #pixTable .col > div:hover {
     box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.2);
-    background-color: #89436b;
+    background-color: #c86050;
     transition: all .3s ease-in-out;
 }
 

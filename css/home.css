@@ -1,0 +1,44 @@
+aside {
+    float: left;
+    width: 25%;
+    padding: 1%;
+    background-color: #c9cba3;
+    border-radius: 2px;
+    margin: 1%;
+    height: fit-content;
+    color: black;
+}
+
+article {
+    height: 100%;
+}
+
+#fillText {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    height: 100%;
+}
+
+aside h2 {
+    font-size: calc(16px + .5vw);
+}
+
+aside p {
+    font-size: calc(14px + .2vw);
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    aside, article {
+        box-sizing: border-box;
+        vertical-align: middle;
+        margin: 1%;
+        float: none;
+        width: calc(98%);
+    }
+
+}

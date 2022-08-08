@@ -7,9 +7,6 @@ body {
 
 header {
     height: 0px;
-    /* Aquí siguen todas las propiedades del header pero
-        le puse una altura de 0 para quitarlo*/
-
     width: 100%;
     background-color: #971760;
     background-image: url(../images/UI/banner.jpg);
@@ -33,17 +30,6 @@ main {
     width: 100%;
     height: 100%;
     background-color: #723d46;
-}
-
-aside {
-    float: left;
-    width: 25%;
-    padding: 1%;
-    background-color: #c9cba3;
-    border-radius: 2px;
-    margin: 1%;
-    height: 100%;
-    color: black;
 }
 
 article {
@@ -123,6 +109,12 @@ footer a{
 
 footer a:hover{
     color: white;
+}
+
+.inlineLink {
+    display: inline;
+    text-decoration: none;
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 575.5px) {
