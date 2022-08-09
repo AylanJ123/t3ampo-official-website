@@ -148,4 +148,9 @@ footer a:hover{
         width: 100%;
         float: none;
     }
+
+    .socicon {
+        height: 40px;
+        padding: 0%;
+    }
 }

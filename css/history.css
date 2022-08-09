@@ -1,0 +1,17 @@
+#chart {
+    background-color: transparent;
+}
+
+center{
+    width: 75%;
+}
+
+@media only screen and (max-width: 575.5px) {
+    #chart {
+        background-color: transparent;
+    }
+
+    center{
+        width: 100%;
+    }
+}
