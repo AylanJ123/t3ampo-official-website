@@ -1,3 +1,5 @@
+//Código brindado por mi buen compañero Anibal
+
 function renderChart(){
     //metodo de la API -> google.visualization.arrayToDataTable
     var data = google.visualization.arrayToDataTable([
