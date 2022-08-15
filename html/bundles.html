@@ -6,15 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/UI/T3AMPO.png">
-
-
     <link type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
         crossorigin="anonymous">
-
     <link type="text/css" rel="stylesheet" href="../css/default.css">
+    <link type="text/css" rel="stylesheet" href="../css/bundles.css">
+    <script src="../js/vue.js"></script>
     <title>T3AMPO</title>
-
 </head>
 
 <body>
@@ -46,23 +44,48 @@
 
     <main class=".container">
         <div id="mainContent">
-            <h1 class="text-center my-5">Try out our pre-made bundles!</h1>
-            <form id="form" class="border border-dark rounded-5 p-4 mb-5 mx-5 bg-dark bg-opacity-10">
-                <div class="border border-dark rounded-5 p-4 mb-2">
-                    <input type="radio" class="form-check-input" name="b" id="b1">
-                    <label for="b1" class="form-check-label h5"><strong><em>Cute Art Bundle</em></strong></label>
+            <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{'Bundle: ' + checkoutBundle.name}}</p>
+                        <p>{{'Games: ' + getGamesFromArray()}}</p>
+                        <p>{{'Gross price: $' + bundleGrossCost()}}</p>
+                        <p>{{'Discount: -$' + bundleDiscounted().toFixed(2)}}</p>
+                        <p>{{'Final price: $' + bundleTotal()}}</p>
+                        <hr>
+                        <div id="keys" >
+                            <p v-for="gameKey in keys">{{gameKey.name + ': ' + gameKey.key}}</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" @Click="buyBundle()">Buy</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="border border-dark rounded-5 p-4 mb-2">
-                    <input type="radio" class="form-check-input" name="b" id="b2">
-                    <label for="b2" class="form-check-label h5"><strong><em>Duality Bundle</em></strong></label>
-                </div>
-                <div class="border border-dark rounded-5 p-4 mb-3">
-                    <input type="radio" class="form-check-input" name="b" id="b3">
-                    <label for="b3" class="form-check-label h5"><strong><em>Latest Games Bundle</em></strong></label>
+            </div>
+            <h1 class="text-center my-5">Try out our awesome bundles!</h1>
+            <form id="form" class="border border-dark rounded-5 p-2 p-sm-4 mb-5 mx-sm-5 mx-2 bg-dark bg-opacity-10">
+                <div v-for="(bundle, _, i) in bundles" class="border border-dark rounded-5 p-4 mb-3">
+                    <input type="radio" class="form-check-input" name="b" :id="'b' + (i + 1)" required>
+                    <label :for="'b' + (i + 1)" class="form-check-label h5"><strong><em>{{bundle.name}}</em></strong></label>
+                    <h1 class="text-success float-end">
+                        {{'-' + bundle.discount + '%'}}
+                    </h1>
+                    <div>
+                        <a v-for="game in bundle.games" :href="game.link" target="_blank" class="d-inline">
+                            <img :src="game.img" :alt="game.name" width="144px" height="81">
+                        </a>
+                    </div>
                 </div>
                 <div class="mb-3 btn-group float-sm-end">
                     <button type="reset" id="reset" class="btn btn-secondary">Unselect</button>
-                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submit" class="btn btn-primary">Checkout</button>
                 </div>
                 <p class="text-muted mb-sm-3 mb-0">Click any game to go to it's page</p>
             </form>
