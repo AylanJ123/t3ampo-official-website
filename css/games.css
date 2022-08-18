@@ -1,8 +1,8 @@
-.leftImage {
+.visualMedia {
     width: 40%;
     float: left;
     border-radius: 25px;
-    height: 100%;
+    height: calc(40% * 9 / 16);
 }
 
 main section {
@@ -16,7 +16,7 @@ main section * {
     font-size: calc(17px + 0.9vw);
 }
 
-#head {
+.head {
     display: inline-block;
     margin: 5px;
     min-height: 125px;
@@ -29,19 +29,28 @@ main article {
     min-width: 40%;
 }
 
-main article * {
+.sectionTextLeft {
+    padding: 0px 20px 2% 0px;
+}
+
+.sectionTextRight {
+    padding: 0px 0px 2% 20px;
+}
+
+main article *, .sectionText > * {
     font-size: calc(13px + .5vw);
 }
 
 @media only screen and (max-width: 575.5px) {
-    .leftImage{
+    .visualMedia {
         box-sizing: border-box;
         margin: 9px;
         border-radius: 5px;
         width: calc(100% - 18px);
+        height: calc((100% - 18px) * 9 / 16);
         float: none;
     }
-    main article * {
+    main article *, .sectionText > * {
         font-size: calc(15px + .4vw);
     }
     main section {
@@ -52,5 +61,8 @@ main article * {
         font-size: calc(15px + 1vw);
         text-align: center;
         margin-bottom: 20px;
+    }
+    .sectionTextLeft, .sectionTextRight {
+        padding: 0px 20px 2%;
     }
 }

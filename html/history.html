@@ -20,7 +20,11 @@
 
     <!-- De la Api, lo que queremos incluir -->
     <!-- packages = Tipos de charts que se quiere incluir -->
-    <script type="text/javascript"> google.load('visualization', '1', { packages: ['corechart'] }); </script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {
+            packages: ['corechart']
+        });
+    </script>
 </head>
 
 <body>
@@ -54,10 +58,23 @@
 
     <main class=".container">
         <div id="mainContent">
-            <h1>Our history!</h1>
-            pain
-            
-            <center>
+            <h1 class="mb-5 mt-3 text-center">Our history!</h1>
+            <div class="mx-2 mx-sm-4">
+                <p>
+                    T3AMPO was founded on May 21, 2021, as a joint initiative and
+                    interdisciplinary indie game developer with the goal of creating rich interactive experiencies.
+                </p>
+                <p>
+                    Our name "T3AMPO" arises from the combination of the words "Team",
+                    the musical term "Tempo", and "3" for the number of our core
+                    values: Informed, Inclusive, and Inspired.
+                </p>
+                <p>
+                    We aim on exploring, encourage and facilitate cooperation dynamics 
+                </p>
+            </div>
+
+            <center class="my-4">
                 <h3>Amount of downloads</h3>
                 <div id="chart"></div>
             </center>
@@ -68,7 +85,7 @@
 
     <footer class="text-center text-black">
         <div class="container p-4">
-            <section class="mb-4">
+            <section>
                 <!-- Facebook -->
                 <a target="_blank" class="btn" href="https://m.facebook.com/T3ampo-106151445111147/?ref=py_c"
                     role="button">
@@ -108,8 +125,8 @@
         <!-- Copyright -->
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
 
 </body>
 

@@ -6,12 +6,10 @@ body {
 }
 
 header {
-    height: 0px;
-    width: 100%;
+    height: 128px;
     background-color: #971760;
-    background-image: url(../images/UI/banner.jpg);
+    background-image: url(../images/UI/header.png);
     background-position-x: center;
-    background-size: auto 75px;
 }
 
 nav {
