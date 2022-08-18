@@ -2,7 +2,7 @@
     width: 40%;
     float: left;
     border-radius: 25px;
-    height: calc(40% * 9 / 16);
+    min-height: 180px;
 }
 
 main section {
