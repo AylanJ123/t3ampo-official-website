@@ -2,7 +2,7 @@
     width: 40%;
     float: left;
     border-radius: 25px;
-    min-height: 180px;
+    height: 100% !important
 }
 
 main section {
