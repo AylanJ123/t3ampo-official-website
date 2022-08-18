@@ -46,15 +46,25 @@ main article *, .sectionText > * {
 }
 
 @media only screen and (max-width: 575.5px) {
+    audio {
+        width: 237.5px;
+    }
+    audio::-webkit-media-controls-current-time-display {
+        font-size: 1em;
+        margin-left: 0px;
+        width: 22px;
+    }
+    audio::-webkit-media-controls-time-remaining-display {
+        font-size: 1em;
+        width: 25px;
+    }
+    
     .visualMedia {
         box-sizing: border-box;
         margin: 9px;
         border-radius: 5px;
         width: calc(100% - 18px);
         float: none;
-    }
-    main article *, .sectionText > * {
-        font-size: calc(15px + .4vw);
     }
     main section {
         margin-top: 20px;
@@ -65,7 +75,13 @@ main article *, .sectionText > * {
         text-align: center;
         margin-bottom: 20px;
     }
+    .sectionText > * {
+        text-align: justify;
+    }
+    main article *, .sectionText > * {
+        font-size: calc(15px + .4vw);
+    }
     .sectionTextLeft, .sectionTextRight {
-        padding: 0px 20px 2%;
+        padding: 0px 10px 2%;
     }
 }
