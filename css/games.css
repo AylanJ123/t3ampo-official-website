@@ -2,7 +2,7 @@
     width: 40%;
     float: left;
     border-radius: 25px;
-    height: 100% !important
+    min-height: 100%;
 }
 
 main section {
@@ -41,13 +41,16 @@ main article *, .sectionText > * {
     font-size: calc(13px + .5vw);
 }
 
+.defaultFont {
+    font-size: 1.5em;
+}
+
 @media only screen and (max-width: 575.5px) {
     .visualMedia {
         box-sizing: border-box;
         margin: 9px;
         border-radius: 5px;
         width: calc(100% - 18px);
-        height: calc((100% - 18px) * 9 / 16);
         float: none;
     }
     main article *, .sectionText > * {

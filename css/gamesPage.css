@@ -1,5 +1,5 @@
 .gameblock {
-    margin: 5px;
+    margin: 15px;
 }
 
 .gameimg {
@@ -9,10 +9,6 @@
 
 @media only screen and (max-width: 575.5px) {
     .gameimg{
-        width: 100%;
-    }
-
-    .gameblock{
-        width: 100%;
+        width: calc(75vw);
     }
 }
