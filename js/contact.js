@@ -8,11 +8,11 @@ var map;
 var marker;
 var geoLoc = navigator.geolocation;
 
-//Renderizar rutas
 var directionsService;
 var directionsDisplay;
 
-var LatLng = { lat: 10.005026407041958, lng: -84.21840218910089 }; //Latitud y Longitud 
+//Latitud y Longitud 
+var LatLng = { lat: 10.005026407041958, lng: -84.21840218910089 };
 
 function initMap()
 {
@@ -55,17 +55,17 @@ function showLocationOnMap(position)
     var request = {
         origin: myLatLng,
         destination: LatLng,
-        travelMode: google.maps.TravelMode.DRIVING, //WALKING, BYCYCLING, TRANSIT
-        unitSystem: google.maps.UnitSystem.METRIC, //IMPERIAL, METRIC
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.METRIC,
     };
 
-    directionsDisplay.setMap(map); //Se vincula el mapa pasado
+    directionsDisplay.setMap(map);
 
     directionsService.route(request, function (result, status)
     {
         if (status == google.maps.DirectionsStatus.OK) 
         {
-            directionsDisplay.setDirections(result);  //Debido a que el renderizador es un MVCObject, detectará 
+            directionsDisplay.setDirections(result); 
         }
     });
 }
