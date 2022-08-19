@@ -65,27 +65,7 @@ function showLocationOnMap(position)
     {
         if (status == google.maps.DirectionsStatus.OK) 
         {
-            //legs[] contiene una matriz de objetos DirectionsLeg, 
-            //cada uno de los cuales contiene información sobre un tramo de la
-            // ruta, desde dos ubicaciones dentro de la ruta dada
-            //Muestra tiempo y distancia
-            // output.innerHTML =
-            //     " Distancia: <i class='fas fa-road'></i> : " +
-            //     result.routes[0].legs[0].distance.text +
-            //     ". Duración: <i class='fas fa-hourglass-start'></i> : " +
-            //     result.routes[0].legs[0].duration.text +
-            //     ".</div>";
-
-            //mostrar ruta
             directionsDisplay.setDirections(result);  //Debido a que el renderizador es un MVCObject, detectará 
-            //automáticamente cualquier cambio en sus propiedades y 
-            //actualizará el mapa cuando sus direcciones asociadas hayan cambiado.
-        }
-        else 
-        {
-            //Mensaje de error
-            output.innerHTML =
-                "<div style='color: red'><i class='fas fa-exclamation-triangle'></i> No se pudo calcular la distancia.</div>";
         }
     });
 }
