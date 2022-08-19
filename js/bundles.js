@@ -72,6 +72,8 @@ let emptyBundle = {
     discount: 0
 }
 
+let alreadyBought = false;
+
 var app = new Vue({
     el: '#mainContent',
     data: {
@@ -102,6 +104,9 @@ var app = new Vue({
             return this.bundleGrossCost() - this.bundleDiscounted();
         },
         buyBundle() {
+            if (alreadyBought || this.checkoutBundle == emptyBundle) return;
+            alreadyBought = true;
+            $("#buyBtn").addClass("disabled");
             let arr = []
             for (let game of this.checkoutBundle.games) {
                 arr.push({
@@ -157,7 +162,9 @@ $("#form").submit(
 
 $("#checkoutModal").on("hide.bs.modal",
     function() {
+        alreadyBought = false;
         app.checkoutBundle = emptyBundle;
         $("#keys").fadeOut();
+        $("#buyBtn").removeClass("disabled");
     }
 )
