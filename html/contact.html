@@ -90,6 +90,9 @@
             <div id="map" class="rounded-4 mb-5">
                 <!--Area del mapa-->
             </div>
+            <button onclick="CalcRoute()" id="calcRouteBtn" class="btn btn-primary float-md-end">Calculate
+                route</button>
+
         </div>
     </main>
 
@@ -137,8 +140,10 @@
 
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/contact.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzrYPcEgxRbeZ_LJDhH_xbTLma6vpaPtM&callback=initMap"></script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGCGsLi__9I5JVYpubUsejKmA2zD8v4Ps&callback=initMap&libraries=places"
+        defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
