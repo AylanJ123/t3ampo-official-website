@@ -64,19 +64,9 @@ function showLocationOnMap(position)
     });
 }
 
-
-$("#submit").click(
-    function ()
-    {
-        //send email here
-    }
-)
-
 $("#form").submit(
     function (e)
     {
-        e.preventDefault();
-        alert("The email has been sent (In development)");
-        location.reload()
+        alert("The email has been sent");
     }
 )
